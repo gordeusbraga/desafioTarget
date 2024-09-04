@@ -1,4 +1,4 @@
-//executado com
+//executado com nodejs
 
 let INDICE = 13;
 let SOMA = 0;

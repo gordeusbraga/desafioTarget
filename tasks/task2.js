@@ -1,18 +1,31 @@
-function pertenceFibonacci(n) {
-  let a = 0,
-    b = 1;
-  while (b <= n) {
-    if (b === n) {
-      return true;
-    }
-    [a, b] = [b, a + b];
+//executado com nodejs
+
+function pertenceSequenciaFibonacci(n) {
+  let x = 0;
+  let y = 1;
+  let Fibonacci;
+  while (x < n) {
+    Fibonacci = x + y;
+    x = y;
+    y = Fibonacci;
   }
-  return false;
+  if (x == n) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 let numero = 21;
-if (pertenceFibonacci(numero)) {
-  console.log(`${numero} pertence à sequência de Fibonacci.`);
+let numero2 = 24;
+
+if (pertenceSequenciaFibonacci(numero)) {
+  console.log(`${numero} pertence a sequencia Fibonacci.`);
 } else {
-  console.log(`${numero} não pertence à sequência de Fibonacci.`);
+  console.log(`${numero} nao pertence a sequencia de Fibonacci.`);
+}
+if (pertenceSequenciaFibonacci(numero2)) {
+  console.log(`${numero2} pertence a sequencia Fibonacci.`);
+} else {
+  console.log(`${numero2} nao pertence a sequencia de Fibonacci.`);
 }
